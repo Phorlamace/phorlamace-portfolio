@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kadwa:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html {
+    --white: #ffffff
+    --sky: #520120;
+    --blue: #08403E;
+    --green: #706513;
+    --yellow: #B57114;
+    --red: #962B09;
+    --orange: #c76e00
+}
+
+body {
+    font-family: "Kadwa", Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    width: 500px;
+    color: var(--sky);
+    padding: 12px;
+    border: 2px solid var(--sky);
+}
+
+nav ol {
+    /* display: block; */
+    /* display: inline-block; */
+    /* display: inline; */ 
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 20%;
+    margin: 0;
+    width: 100vw;
+
+    height: 50px;
+    background-color: white;
+    list-style: none;
+}
+nav a {
+    font-weight: 600;
+    font-size: 1rem;
+
+    text-decoration: none;
+    color: black;
+}
+a {
+    color: white;
+}
+h1 {
+    /* position: fixed; */
+    /* top: 0; */
+    /* right: 0; */
+    /* position: sticky; */
+    /* top: 20px; */
+}
+ header{
+    position: sticky;
+    top: 0;
+ }
+    
+ .botton {
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--orange);
+ }
+  
+ #Skills {
+    padding: 60px 0;
+ }
+
+ /* pseudoelement */
+ nav ol li:last-child {
+    position: absolute;
+    right: 50px;
+ }
+
+ /* main section:first-child { position: relative;} */
+  /* h1 { position: absolute; top: 0; left: 0;} */
+
+main section:first-child {
+    background-color: #B57114;
+}
