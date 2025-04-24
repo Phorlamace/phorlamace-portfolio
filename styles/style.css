@@ -4,37 +4,44 @@
     box-sizing: border-box;
 }
 html {
-    --white: #ffffff
+    --white: #ffffff;
     --sky: #520120;
     --blue: #08403E;
     --green: #706513;
     --yellow: #B57114;
     --red: #962B09;
-    --orange: #c76e00
+    --orange: #c76e00;
+    --green1: #CCEA8D;
+    --green2:#A6BC09;
+    --blue1:#019587;
+    --green3:#005148;
+    --blue2:#01415B;
 }
 
 body {
     font-family: "Kadwa", Helvetica, sans-serif;
     margin: 0;
 }
+header{
+   position: sticky;
+   top: 0;
+   padding: 10px 0px;
+   background-color: #ffffff;
 
-h1 {
-    width: 500px;
-    color: var(--sky);
-    padding: 12px;
-    border: 2px solid var(--sky);
+   /* z-index ใช้ปรับลำดับ ซ้อนทับ */
+   z-index: 1;
 }
 
+/* nav bar */
 nav ol {
-    /* display: block; */
-    /* display: inline-block; */
-    /* display: inline; */ 
+    /* display: block กินพทเต็ม กำหนดขนาดได้; */
+    /* display: inline-block ขนาดเท่ากับcontentเเต่กำหนดได้ ; */
+    /* display: inline ขนาดเท่ากับ content กำหนดขนาดไม่ได้; */ 
     display: flex;
     flex-direction: row;
     align-items: center; 
     justify-content: center;
-    gap: 30px;
-    padding: 30px 20%;
+    padding: 10px 20px;
     margin: 0;
     width: 100vw;
 
@@ -45,46 +52,366 @@ nav ol {
 nav a {
     font-weight: 600;
     font-size: 1rem;
-
+    padding: 10px 20px;
     text-decoration: none;
     color: black;
+}
+ /* pseudoclass */
+ nav ol li:last-child {
+   position: absolute;
+   right: 50px;
+}
+ /* main section:first-child { position: relative;} */
+ /* h1 { position: absolute; top: 0; left: 0;} */
+.botton {
+   padding: 5px 10px;
+   border-radius: 8px;
+   font-weight: 400;
+   color: white;
+   background-color: var(--orange);
+}
+/* pseudoelement */
+/* hover/active/focus/visited */
+nav a:hover {
+   background-color: #D3D3D3;
+   padding: 20px 20px;
+}
+.botton:hover {
+  background-color: #962B09;
+  padding: 5px 10px;
 }
 a {
     color: white;
 }
-h1 {
-    /* position: fixed; */
+
+    /* position: fixed; ติดกับหนา้จอ หลุดจากcontentflow */
     /* top: 0; */
     /* right: 0; */
-    /* position: sticky; */
+    /* position: sticky; ติดไปจนถึงจุดสิ้นสุดของ parent element*/
     /* top: 20px; */
+
+ 
+ /* section about */
+ #about {
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+   justify-content: start;
+   margin: 0px 0px;
+   width: 100vw;
+   height: 100vh;
+   /* border: 2px solid var(--green3); */
+   font-size: 2rem;
+   color: #ffffff;
+
+   background-image: url('../pictures/about\ me.JPG');
+   background-position: center;
+   background-size: cover;
 }
- header{
-    position: sticky;
-    top: 0;
+#about h1 {
+   margin-top: 0px;
+}
+#about span {
+   font-size: 2rem;
+   display: block;
+   text-align: center;
+}
+
+
+
+/* section Interests */
+#Interests {
+   background-color: #441303;
+   display: grid;
+   grid-template-columns: repeat(6,1fr);
+   /* grid-template-columns: repeat(3,1fr); */
+   column-gap: 50px;
+}
+#Interests h2 {
+   color: white;
+}
+#Interests #phoin {
+   border-top-left-radius: 100px;
+   border-bottom-right-radius: 0px;
+   grid-column: span 4 ;
+  width: 100%;
+  height: auto;
+  padding: 50px 0px;
+}
+#Interests > div {
+   grid-column: span 2;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   border-radius: 3px;
+}
+#physics-interest {
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+#physics-interest h3 {
+   margin: 0;
+   padding: 10px 10px;
+   font-size: 1.75rem;
+}
+#physics-interest p {
+   margin: 0;
+   font-size: 1rem;
+}
+
+
+
+/* grid6 */
+.grid-6 {
+   display: grid;
+   grid-template-columns: repeat(6,1fr);
+   /* grid-template-columns: repeat(3,1fr); */
+   column-gap: 10px;
+}
+.grid-6 h2 {
+   font-size: 2rem;
+   color:#962B09;
+}
+h2 {
+   grid-column: span 6 ;
+}
+section {
+   padding: 60px 60px;
+}
+
+
+/* section skill */
+
+ #Skills #pho {
+   grid-column: span 3 ;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
  }
+ #Skills > div {
+   grid-column: span 3;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+.Skills-item {
+   padding: 20px 20px;
+   gap: 20px;
+   grid-column: span 3;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   border-radius: 8px;
+
+   background-color: black;
+   color: white;
+}
+.Skills-item img {
+   width: 100px;
+   height: auto;
+   border-radius: 8px;
+}
+.Skills-item div {
+   display: flex;
+   flex-direction: column;
+}
+.Skills-item div h3 {
+   font-size: 1 rem;
+   margin: 0;
+   color: white;
+
+}
+.Skills-item div p {
+   font-size: 0.8rem;
+   color: #D3D3D3;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* setion Education */
+ 
+ #Education div {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100vw;
+   backdrop-filter: brightness(95%);
+   padding: 60px 0;
     
- .botton {
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-weight: 400;
-    color: white;
-    background-color: var(--orange);
+    height: 100vh; 
  }
-  
- #Skills {
+ #Education  {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ 
+    height: 100vh;
+
+    background-image: url('../pictures/jorpor-end.jpg');
+    /* วิธีปรับสัดส่วน */
+    background-position: center;
+    background-size: cover;
+
+    color: #ffffff;
+    }
+ #Education h2 {
+   font-size: 4rem;
+   margin: 0;
+   padding-top: 300px;
+ }
+ #Education p {
+   font-size: 1rem;
+   font-weight: 700;
+ }
+ #Education #SCIUS {
+   font-size: 1rem;
+   font-weight: 700;
+ }
+ #Education span {
+   font-size: 1rem;
+   font-weight: 700;
+   display: block;
+   text-align: center;
+ }
+
+
+ /* section Achievement */
+ #phoach {
+   grid-column: span 3 ;
+  width: 100%;
+  height: 100%;
+ 
+  border-radius: 10px;
+ }
+ #phoachc {
+   grid-column: span 6 ;
+   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+ #phoachi {
+   grid-column: span 3;
+   width: 100%;
+   height: auto;
+}
+#phoachi p {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+#phoachi #phoachiv {
+   grid-column: span 3;
+   width: 100%;
+   height: auto;
+}
+ 
+
+
+ /* section activities */
+ #Activities {
+   
+ }
+ .grid-6 h2 {
+   grid-column: span 6;
+ }
+ #Hackathon {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   padding: 0px 20px;
+
+   grid-column: span 3 ;
+
+   background-image: url('../pictures/hackathon-messy.jpg');
+   /* วิธีปรับสัดส่วน */
+   background-position: center;
+   background-size: cover;
+   border-radius: 20px;
+ }
+ #Hackathonpho {
+   display: flex;
+   flex-direction: column;
+ }
+ #Hackathonpho img {
+   width: 65%;
+   padding: 10px 10px;
+
+ }
+#grid-3 {
+   grid-column: span 3;
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+}
+   
+ #Hackathon #para {
+   padding: 0px 20px;
+   background-color: white;
+   grid-column: span 3;
+   border-radius: 10px;
+ }
+ #Engi {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   padding: 0px 20px;
+
+   grid-column: span 3 ;
+
+   background-image: url('../pictures/j-knowledge-multimeter.jpg');
+   /* วิธีปรับสัดส่วน */
+   background-position: center;
+   background-size: cover;
+   border-radius: 20px;
+ }
+ #Engi #Engipho {
+   grid-column: span 3;
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+ }
+ #Engi div {
+   padding: 0px 20px;
+   background-color: white;
+   display: grid;
+   grid-column: span 3;
+   border-radius: 10px;
+ }
+
+ 
+
+ 
+
+
+
+
+ /* section project */
+ #Project {
+    
+ }
+
+
+ /* section contact */
+ #Contact {
     padding: 60px 0;
  }
-
- /* pseudoelement */
- nav ol li:last-child {
-    position: absolute;
-    right: 50px;
- }
-
- /* main section:first-child { position: relative;} */
-  /* h1 { position: absolute; top: 0; left: 0;} */
-
-main section:first-child {
-    background-color: #B57114;
+footer section ul a {
+   color: black;  
 }
