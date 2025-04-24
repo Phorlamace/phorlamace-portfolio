@@ -267,7 +267,7 @@ section {
     background-position: center;
     background-size: cover;
 
-    color: #ffffff;
+    color: white;
     }
  #Education h2 {
    font-size: 4rem;
@@ -291,11 +291,22 @@ section {
 
 
  /* section Achievement */
+ #Achievements #posn {
+   grid-column: span 6;
+ }
+ #posn {
+   display: grid;
+   background-color: #01415B ;
+   color: white;
+   margin-bottom: 10px;
+   padding: 10px 10px;
+   border-radius: 10px;
+   
+ }
  #phoach {
    grid-column: span 3 ;
   width: 100%;
   height: 100%;
- 
   border-radius: 10px;
  }
  #phoachc {
@@ -305,8 +316,47 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: center;
+ 
  }
+ 
  #phoachi {
+   grid-column: span 3;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #005148;
+   color: white;
+   padding: 10px 10px;
+   border-radius: 10px;
+}
+/* box shadow: 5px lightgray */
+#onet {
+   width: auto;
+   height: 743.75px;
+   border-radius: 10px;
+}
+#TU-GET {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+}
+#bronze {
+   display: grid;
+   background-color: #019587 ;
+   color: white;
+   margin-top: 10px;
+   padding: 10px 10px;
+   border-radius: 10px;
+   grid-column: span 6;
+}
+
+#bronze img {
+   width: 100%;
+   height: auto;
+}
+
+
+ /* #phoachi {
    grid-column: span 3;
    width: 100%;
    height: auto;
@@ -321,97 +371,120 @@ section {
    width: 100%;
    height: auto;
 }
- 
+  */
 
 
  /* section activities */
- #Activities {
-   
- }
- .grid-6 h2 {
-   grid-column: span 6;
- }
- #Hackathon {
+ .act {
    display: grid;
-   align-items: center;
-   justify-content: center;
-   padding: 0px 20px;
-
+   grid-template-columns: repeat(6,1fr);
+   /* grid-template-columns: repeat(3,1fr); */
+   column-gap: 10px;
+   grid-column: span 3;
+   padding: 10px 10px;
+   color: black;
+   margin: 10px 0px;
+ }
+ .acttext {
+   display: grid;
    grid-column: span 3 ;
+   width: 100%;
 
-   background-image: url('../pictures/hackathon-messy.jpg');
-   /* วิธีปรับสัดส่วน */
+ }
+ 
+ .actpho {
+   grid-column: span 3;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+
+ }
+ .actpho img {
+   width: 100%;
+   height: auto; 
+   margin-top: 10px; 
+   margin-bottom: 10px;
+   border-radius: 10px;
+ }
+ .acttext div {
+   padding: 10px 10px;
+   background-color: white;
+   border-radius: 10px;
+
+ }
+
+/* เขียนเเยก */
+ #cube {
+   background-image: url('../pictures/cubesat-photome.jpg');
    background-position: center;
    background-size: cover;
    border-radius: 20px;
  }
- #Hackathonpho {
-   display: flex;
-   flex-direction: column;
+ #Hackathon {
+   background-image: url('../pictures/hackathon-messy.jpg');
+   background-position: center;
+   background-size: cover;
+   border-radius: 20px;
  }
- #Hackathonpho img {
-   width: 65%;
-   padding: 10px 10px;
+ #Engi {
+   background-image: url('../pictures/j-knowledge-car.jpg');
+   background-position: center;
+   background-size: cover;
+   border-radius: 20px;
+ }
+ #AI {
+   background-image: url('../pictures/ai-crowded.jpg');
+   background-position: center;
+   background-size: cover;
+   border-radius: 20px;
+ }
 
+
+
+
+ .grid-6 h2 {
+   grid-column: span 6;
  }
-#grid-3 {
+
+ 
+
+ /* section project */
+ #Project {
+   background-color: #01415B;
+ }
+ #Project h2 {
+   color: white;
+}
+.span-3 {
+   display: grid;
    grid-column: span 3;
+   padding: 20px 20px;
+   color: #CCEA8D;
+}
+
+.span-3 h3{
+   margin: 0;
+   height: fit-content;
+   
+}
+#Project img {
    width: 100%;
    height: auto;
    border-radius: 10px;
 }
-   
- #Hackathon #para {
-   padding: 0px 20px;
-   background-color: white;
-   grid-column: span 3;
-   border-radius: 10px;
- }
- #Engi {
-   display: grid;
-   align-items: center;
-   justify-content: center;
-   padding: 0px 20px;
-
-   grid-column: span 3 ;
-
-   background-image: url('../pictures/j-knowledge-multimeter.jpg');
-   /* วิธีปรับสัดส่วน */
-   background-position: center;
-   background-size: cover;
-   border-radius: 20px;
- }
- #Engi #Engipho {
-   grid-column: span 3;
-   width: 100%;
-   height: auto;
-   border-radius: 10px;
- }
- #Engi div {
-   padding: 0px 20px;
-   background-color: white;
-   display: grid;
-   grid-column: span 3;
-   border-radius: 10px;
- }
-
- 
-
- 
-
-
-
-
- /* section project */
- #Project {
-    
- }
-
 
  /* section contact */
- #Contact {
+ #concept {
     padding: 60px 0;
+    background-color: #706513;
+    color: white;
  }
+ #concept ul {
+   list-style: none;
+   color: white;
+ }
+ 
 footer section ul a {
    color: black;  
 }
