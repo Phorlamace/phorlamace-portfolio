@@ -32,6 +32,9 @@ header{
    z-index: 1;
 }
 
+.shadow {
+   box-shadow: 5px 5px 5px #D3D3D3;
+}
 /* nav bar */
 nav ol {
     /* display: block กินพทเต็ม กำหนดขนาดได้; */
@@ -75,6 +78,7 @@ nav a {
 nav a:hover {
    background-color: #D3D3D3;
    padding: 20px 20px;
+   box-shadow: 0px 5px 3px #ffffff;
 }
 .botton:hover {
   background-color: #962B09;
@@ -242,25 +246,29 @@ section {
 
 
 /* setion Education */
- 
- #Education div {
+ #Education {
+   padding: 0;
+ }
+ #title-ed {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    width: 100vw;
-   backdrop-filter: brightness(95%);
-   padding: 60px 0;
+   backdrop-filter: brightness(80%);
+   padding: 0px 0;
     
     height: 100vh; 
  }
- #Education  {
+ #title-ed {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
  
     height: 100vh;
+    width: 100vw;
+    
 
     background-image: url('../pictures/jorpor-end.jpg');
     /* วิธีปรับสัดส่วน */
@@ -269,25 +277,50 @@ section {
 
     color: white;
     }
- #Education h2 {
-   font-size: 4rem;
+ #title-ed {
+   font-size: 6rem;
+   font-weight: 800;
    margin: 0;
-   padding-top: 300px;
+   padding-top: 0px;
  }
- #Education p {
-   font-size: 1rem;
+
+ .span-2 {
+   display: grid;
+   grid-column: span 2;
+   width: 100%;
+   height: auto;
+ }
+ .span-4 {
+   display: grid;
+   grid-column: span 4;
+ }
+#jorpor {
+   padding: 60px 60px;
+}
+ #jorpor p {
+   font-size: 1.5rem;
    font-weight: 700;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
  }
- #Education #SCIUS {
-   font-size: 1rem;
-   font-weight: 700;
+ #jorpor img {
+   width: 50%;
+   height: auto;
+   margin-left: 60px;
+
  }
+
  #Education span {
-   font-size: 1rem;
+   font-size: 1.5rem;
    font-weight: 700;
    display: block;
    text-align: center;
  }
+
+
+
 
 
  /* section Achievement */
@@ -416,7 +449,7 @@ section {
 
 /* เขียนเเยก */
  #cube {
-   background-image: url('../pictures/cubesat-photome.jpg');
+   background-image: url('../pictures/cubesat-crowded.jpg');
    background-position: center;
    background-size: cover;
    border-radius: 20px;
@@ -466,25 +499,48 @@ section {
 .span-3 h3{
    margin: 0;
    height: fit-content;
-   
 }
 #Project img {
    width: 100%;
    height: auto;
    border-radius: 10px;
 }
+#p1 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+}
 
  /* section contact */
  #concept {
-    padding: 60px 0;
     background-color: #706513;
     color: white;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  }
  #concept ul {
    list-style: none;
    color: white;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ #concept ul li a {
+   color: white;
+   font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    line-height: 1.5;
+ }
+ #real-life {
+    background-color: #706513;
+    color: #706513;
+    display: block;
+    width: 100vw;
+   height: auto;
  }
  
-footer section ul a {
-   color: black;  
-}
