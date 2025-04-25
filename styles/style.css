@@ -16,6 +16,7 @@ html {
     --blue1:#019587;
     --green3:#005148;
     --blue2:#01415B;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,9 +33,7 @@ header{
    z-index: 1;
 }
 
-.shadow {
-   box-shadow: 5px 5px 5px #D3D3D3;
-}
+ 
 /* nav bar */
 nav ol {
     /* display: block กินพทเต็ม กำหนดขนาดได้; */
@@ -71,7 +70,7 @@ nav a {
    border-radius: 8px;
    font-weight: 400;
    color: white;
-   background-color: var(--orange);
+   background-color: #08403E;
 }
 /* pseudoelement */
 /* hover/active/focus/visited */
@@ -112,6 +111,7 @@ a {
    background-position: center;
    background-size: cover;
 }
+
 #about h1 {
    margin-top: 0px;
 }
@@ -136,11 +136,11 @@ a {
 }
 #Interests #phoin {
    border-top-left-radius: 100px;
-   border-bottom-right-radius: 0px;
+   border-bottom-right-radius: 100px;
    grid-column: span 4 ;
   width: 100%;
   height: auto;
-  padding: 50px 0px;
+  margin: 50px 0px;
 }
 #Interests > div {
    grid-column: span 2;
@@ -249,13 +249,13 @@ section {
  #Education {
    padding: 0;
  }
- #title-ed {
+ #title-ed div {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    width: 100vw;
-   backdrop-filter: brightness(80%);
+   backdrop-filter: brightness(80%) blur(1px);
    padding: 0px 0;
     
     height: 100vh; 
@@ -297,7 +297,7 @@ section {
 #jorpor {
    padding: 60px 60px;
 }
- #jorpor p {
+ #jorpor h3 {
    font-size: 1.5rem;
    font-weight: 700;
    display: flex;
@@ -322,7 +322,9 @@ section {
 
 
 
-
+.shadow {
+   box-shadow: 10px 10px 10px #3c3b3b;
+}
  /* section Achievement */
  #Achievements #posn {
    grid-column: span 6;
@@ -331,10 +333,9 @@ section {
    display: grid;
    background-color: #01415B ;
    color: white;
-   margin-bottom: 10px;
+   margin-bottom: 20px;
    padding: 10px 10px;
    border-radius: 10px;
-   
  }
  #phoach {
    grid-column: span 3 ;
@@ -342,6 +343,9 @@ section {
   height: 100%;
   border-radius: 10px;
  }
+ 
+
+ 
  #phoachc {
    grid-column: span 6 ;
    width: 100%;
@@ -352,6 +356,9 @@ section {
  
  }
  
+ .ma2 {
+   margin-right: 20px;
+ }
  #phoachi {
    grid-column: span 3;
    display: flex;
@@ -361,6 +368,8 @@ section {
    color: white;
    padding: 10px 10px;
    border-radius: 10px;
+   margin-bottom: 20px;
+
 }
 /* box shadow: 5px lightgray */
 #onet {
@@ -472,7 +481,10 @@ section {
    background-size: cover;
    border-radius: 20px;
  }
-
+ .stir h3 {
+   height: 75px;
+ }
+ 
 
 
 
@@ -484,7 +496,7 @@ section {
 
  /* section project */
  #Project {
-   background-color: #01415B;
+   background-color: #032330;
  }
  #Project h2 {
    color: white;
@@ -493,7 +505,7 @@ section {
    display: grid;
    grid-column: span 3;
    padding: 20px 20px;
-   color: #CCEA8D;
+   color: #e1fbaa;
 }
 
 .span-3 h3{
@@ -536,6 +548,7 @@ section {
     text-decoration: none;
     line-height: 1.5;
  }
+ 
  #real-life {
     background-color: #706513;
     color: #706513;
